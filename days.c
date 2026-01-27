@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     int month;
-    scanf("%d",month);
+    scanf("%d",&month);
     switch(month){
         case 1:
         printf("31 days");
@@ -25,19 +25,19 @@ int main(){
         printf("31 days");
         break;
         case 8:
-        printf("30 days");
+        printf("31 days");
         break;
         case 9:
-        printf("31 days");
+        printf("30 days");
         break;
         case 10:
-        printf("30 days");
-        break;
-        case 11:
         printf("31 days");
         break;
-        case 12:
+        case 11:
         printf("30 days");
+        break;
+        case 12:
+        printf("31 days");
         break;
     }
 }
