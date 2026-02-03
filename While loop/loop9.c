@@ -1,20 +1,22 @@
 #include<stdio.h>
 int main(){
-    int c;
-    scanf("%d",&c);
     int n;
     scanf("%d",&n);
+    int c;
+    scanf("%d",&c);
     int i=1;
     int a;
-    int cr=0;
+    int sum=0;
+    int k;
+    int res;
     while(i<=n){
         scanf("%d",&a);
-        c=c+a;
-        if(c>100){
-            cr++;
+        sum=sum+a;
+        if(sum<=c ){
+            k=i;
+            res=c-sum;
         }
-        i++;
     }
-    printf("Final beds:%d\n",100);
-    printf("Critical hours:%d",cr);
+    printf("%d ",k);
+    printf("%d",res);
 }
