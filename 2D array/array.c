@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+    int r;
+    scanf("%d",&r);
+    int c;
+    scanf("%d",&c);
+    int a[r][c];
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    int arr[r];
+    int sum;
+    for(int i=0;i<r;i++){
+        sum=0;
+        for(int j=0;j<c;j++){
+            sum=sum+a[i][j];
+        }
+        arr[i]=sum;
+    }
+    int max=arr[0];
+    for(int i=0;i<r;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    printf("The maximum value is :%d",max);
+}
