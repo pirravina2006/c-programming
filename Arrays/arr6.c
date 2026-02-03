@@ -7,17 +7,15 @@ int main(){
         scanf("%d",&a[i]);
     }
     for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
+        int dup=0;
+        for(int j=0;j<i;j++){
             if(a[i]==a[j]){
-                for(int k=j;k<n-1;k++){
-                    a[k]=a[k+1];
-                }
-                n--;
-                j--;
+                dup=1;
+                break;
             }
         }
-    }
-    for(int i=0;i<n;i++){
-        printf("%d ",a[i]);
+        if(dup==0){
+            printf("%d ",a[i]);
+        }
     }
 }
