@@ -10,6 +10,7 @@ int main(){
             scanf("%d",&a[i][j]);
         }
     }
+    int count=0;
     for(int i=0;i<r;i++){
         even=0;
         odd=0;
@@ -22,12 +23,9 @@ int main(){
             }
         }
         if(even==odd){
-            printf("%d",i);
-            break;
-        }
-        else if(even>odd){
-            printf("%d",i);
-            break;
+            count=count+1;
         }
     }
+    printf("%d ",count);
+    return 0;
 }
