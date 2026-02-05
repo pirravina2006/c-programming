@@ -24,10 +24,13 @@ int main(){
     for(int i=0;i<k;i++){
         if(temp[i]>max){
             max=temp[i];
+            printf("%d",i);
+            break;
         }
         else{
             max=max;
+            printf("%d",i);
+            break;
         }
     }
-    printf("%d",max);
 }
