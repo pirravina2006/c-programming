@@ -7,14 +7,20 @@ int main(){
         scanf("%d",&a[i]);
     }
     int max=a[n-1];
-    for(int i=n-1;i>0;i--){
-        if(a[i]>max){
+    int temp[n];
+    int k=0;
+    for(int i=n-1;i>=0;i--){
+        if(a[i]>=max){
             max=a[i];
-            printf("%d ",max);
+            temp[k]=max;
+            k++;
         }
-        else{
-            printf("%d ",max);
+        else if(a[i]>max && a[i]!=max){
+            temp[k]=max;
+            k++; 
         }
     }
-    printf("-1");
+    for(int i=k-1;i>=0;i--){
+        printf("%d ",temp[i]);
+    }
 }
