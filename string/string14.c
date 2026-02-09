@@ -1,26 +1,15 @@
 #include<stdio.h>
 int main(){
-    char s1[20];
-    fgets(s1,20,stdin);
-    int count;
+    char str[20];
+    fgets(str,20,stdin);
     int k=0;
     int temp[k];
-    int max=0;
-    int min=10;
-    for(int i=0;s1[i]!='\0';i++){
-        count=0;
-        for(int j=0;s1[j]!='\0';j++){
-            if(s1[i]==s1[j]){
-                count=count+1;
-            }
-        }
-        if(count>max){
-            max=count;
-        }
-        if(count<min && min>0){
-            min=count;
-        }
+    for(int i=0;i<20 && str[i]!='\0';i++){
+        temp[i]=str[i];
+        k++;
     }
-    int res=max-min;
-    printf("%d",res);
+
+    for(int i=0;i<k;i++){
+        printf("%c",temp[i]);
+    }
 }
