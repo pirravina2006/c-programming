@@ -1,10 +1,8 @@
 #include<stdio.h>
-#include<string.h>
 int main(){
     char str[30];
     fgets(str,30,stdin);
-    int i;
-    for(int i=strlen(str)-1;i>=0;i--){
+    for(int i=0;i<30 && str[i]!='@';i++){
         printf("%c",str[i]);
     }
 }
