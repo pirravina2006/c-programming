@@ -1,19 +1,35 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
-    char str[200];
-    fgets(str,sizeof(str),stdin);
-    int count=0;
+    char str[20];
+    fgets(str,20,stdin);
     for(int i=0;str[i]!='\0';i++){
-        if((str[i]=='a' || str[i]=='e' ||str[i]=='o' ||str[i]=='u' ||str[i]==i) && str[i]!=str[i+1]){
-            count++;
+        if(str[i]=='\n'){
+            str[i]='\0';
+            break;
         }
     }
-    if(count>0){
-        printf("%d",count+1);
+    char res[20];
+    int k=0;
+    for(int i=strlen(str)-1;i>=0;i--){
+        res[k]=str[i];
+        k++;
+    }
+    res[k]='\0';
+    int m=0;
+    int diff=0;
+    while(str[m]!='\0'){
+        if(str[m]!=res[m]){
+            diff=1;
+            break;
+        }
+        m++;
+    }
+    if(diff==0){
+        printf("palindrome");
     }
     else{
-        count=0;
-        printf("%d",count);
+        printf("not palindrome");
     }
-
+    return 0;
 }
