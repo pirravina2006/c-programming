@@ -1,5 +1,5 @@
 #include<stdio.h>
-int digit(int num){
+long long  int digit(long long int num){
     int rem;
     int count=0;
     while(num>0){
@@ -10,7 +10,7 @@ int digit(int num){
     printf("%d",count);
 }
 int main(){
-    int num;
+    long long int num;
     scanf("%d",&num);
     digit(num);
 }
