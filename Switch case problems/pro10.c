@@ -1,15 +1,13 @@
 #include<stdio.h>
 int main(){
-    int val;
-    scanf("%d",&val);
-    int n=0;
-    int n2=1;
-    int sum=0;
-    for(int i=1;i<=val;i++){
-        printf("%d ",n);
-        sum=n+n2;
-        n=n2;
-        n2=sum;
+    int base;
+    scanf("%d",&base);
+    int pow;
+    scanf("%d",&pow);
+    int res=1;
+    for(int i=1;i<=pow;i++){
+        res=res*base;
     }
+    printf("%d",res);
     return 0;
 }
