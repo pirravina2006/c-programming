@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+    char str[100];
+    scanf("%s",&str);
+    char *p=str;
+    int count=0;
+    int i=0;
+    while(*p!='\0'){
+        if(*(p+i)=='a' ||*(p+i)=='e' ||*(p+i)=='i' ||*(p+i)=='o' ||*(p+i)=='u'||*(p+i)=='A'||*(p+i)=='E'||*(p+i)=='I'||*(p+i)=='O' ||*(p+i)=='U'){
+            break;
+        }
+        else{
+            count=count+1;
+        }
+        i++;
+    }
+    printf("%d",count-1);
+    return 0;
+}
