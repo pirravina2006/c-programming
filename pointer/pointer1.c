@@ -1,14 +1,15 @@
 #include<stdio.h>
-int swap(int *a,int *b){
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-    printf("%d %d",*a,*b);
-}
 int main(){
     int a;
     int b;
     scanf("%d",&a);
     scanf("%d",&b);
-    swap(&a,&b);
+    printf("Before swapping : %d  %d",a,b);
+    int *c=&a;
+    int *d=&b;
+    int temp=*c;
+    *c=*d;
+    *d=temp;
+    printf("\nAfter swapping : %d  %d",*c,*d);
+    return 0;
 }
