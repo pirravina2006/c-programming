@@ -16,21 +16,17 @@ int main(){
         pro=1;
         for(int j=0;j<c;j++){
             pro=pro*a[i][j];
-            temp[k]=pro;
-            k++;
         }
+        temp[k]=pro;
+        k++;
     }
+    int res=0;
     int max=temp[0];
     for(int i=0;i<k;i++){
         if(temp[i]>max){
             max=temp[i];
-            printf("%d",i);
-            break;
-        }
-        else{
-            max=max;
-            printf("%d",i);
-            break;
+            res=i;
         }
     }
+    printf("%d",res);
 }
