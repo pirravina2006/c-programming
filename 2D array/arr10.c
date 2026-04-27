@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 int main(){
     int r,c;
@@ -30,3 +31,4 @@ int main(){
     }
     printf("%d",res);
 }
+
